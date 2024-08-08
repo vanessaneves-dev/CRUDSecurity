@@ -17,10 +17,19 @@ public class PessoaController {
     @Autowired
     private PessoaRepository pessoaRepository;
 
+
+    /*mapeamento para mostrar a index*/
     @GetMapping(path = {"/", "index"})
     public String index() {
         return "index";
     }
+
+    /*
+    tentativa de mapiar a rota login
+    @GetMapping(path = {"/login"})
+    public String login() {
+        return "login";
+    }*/
 
     //metodo que devolve um formulário ao usuário
     @GetMapping("/cadastrar")
@@ -50,6 +59,7 @@ public class PessoaController {
         return "listarPessoas";
     }
 
+    /* mapeamento para pagina que tem o formulario para alterar um dado na tabela*/
     @GetMapping("/alterar/{id}")
     public String alterarPessoa(@PathVariable Long id, Model model) {
         Optional<Pessoa> p = pessoaRepository.findById(Math.toIntExact(id));
