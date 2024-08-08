@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragmentos</title>
+</head>
+<body>
+<!-- Fragmento da Navbar -->
+<div th:fragment="navbar">
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/listar}">Listar Pessoas</a></li>
+            <li><a th:href="@{/cadastrar}">Cadastrar Pessoa</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Fragmento do Footer -->
+<div th:fragment="footer">
+    <footer>
+        <p>&copy; 2024 CRUD de Pessoas. Todos os direitos reservados.</p>
+    </footer>
+</div>
+</body>
+</html>
